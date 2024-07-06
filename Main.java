@@ -29,12 +29,4 @@ public class Main {
 
     }
 
-    public static String faToStar(String message) {
-        return message.chars()  // Stream of int representing character codes
-                .mapToObj(c -> (char) c)  // Convert int to Character
-                .map(c -> c == 'a' ? '*' : c)  // Replace 'a' with '*'
-                .map(String::valueOf)  // Convert Character to String
-                .collect(Collectors.joining());  // Join all parts into a single String
-    }
-
 }
